@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+  <form action="/edit/{{ info.id }}" method="post">
+    <input type="text" name="courseName" autocomplete="off" placeholder="Course Name" value="{{ info.name }}" class="mb-3" autofocus><br>
+    <input type="text" name="teacher" autocomplete="off" placeholder="Teacher" value="{{ info.teacher }}" class="mb-3"><br>
+    <input type="text" name="room" autocomplete="off" placeholder="Room Number" value="{{ info.room }}" class="mb-3"><br>
+    <input type="text" name="department" autocomplete="off" placeholder="Department" value="{{ info.department }}" class="mb-3"><br>
+
+    <input type="submit" value="Update Course Info" class="btn btn-primary">
+    
+  </form>
+</div>
+
+
+{% endblock %}
